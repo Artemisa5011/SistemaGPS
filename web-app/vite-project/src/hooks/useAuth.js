@@ -27,9 +27,30 @@ export const AuthProvider = ({ children }) => {
     const signIn = async (email, password) => {
         const { data, error } = await supabase.auth.signInWithPassword({ 
             email,
-            password });
+            password }) 
         if (error) throw error;
-        setUser(data.user);
+        return data;
     }
 
+    const signOut = async () => {
+        const { error } = await supabase.auth.signOut();
+        if (error) throw error;
+        setUser(null);
+    }
+
+    return (
+        <AuthContext.Provider value={{ user, loading, signIn, signOut }}>
+            {children}
+        </AuthContext.Provider>
+    )
+
 }
+
+// Este es el hook que usamos en los componentes
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (context === undefined) {
+        throw new Error('useAuth debe usarse dentro de AuthProvider');
+    }
+    return context;
+};
