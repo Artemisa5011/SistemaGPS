@@ -90,7 +90,9 @@ export const HomePage = ({ onLogin }) => {
 
       <footer className="raven-home-footer px-5 py-6 text-center sm:px-8">
         RAVEN TRACK <span aria-hidden="true">&middot;</span> Sistema de Rastreo GPS
+        <p className="mt-2 normal-case tracking-normal">Derechos reservados por ALUCARD © 2026</p>
       </footer>
+      
     </main>
   )
 }
