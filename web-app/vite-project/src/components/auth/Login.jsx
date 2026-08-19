@@ -29,8 +29,8 @@ export const Login = () => {
       <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
         <div className="text-center mb-8">
           <div className="text-6xl mb-4">🚗</div>
-          <h1 className="text-3xl font-bold text-gray-800">SISTEMA DE GESTION DE CARROS</h1>
-          <p className="text-gray-600">CarTracker</p>
+          <h1 className="text-3xl font-bold text-gray-800">RAVEN TRACK</h1>
+          <p className="text-gray-600">Sistema de Rastreo GPS</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
