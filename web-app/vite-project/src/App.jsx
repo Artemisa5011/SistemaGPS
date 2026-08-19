@@ -1,9 +1,30 @@
+import React from 'react'
+import { useAuth } from './hooks/useAuth'
+import { Login } from './components/auth/Login'
+import { DashboardRouter } from './components/dashboards/DashboardRouter'
+
 function App() {
-  return (
-    <h1 className="text-4xl font-bold text-blue-600">
-      Sistema GPS
-    </h1>
-  )
+  const { user, loading } = useAuth()
+
+  // Mientras carga, muestra un spinner
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Cargando...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Si no hay usuario, muestra el login
+  if (!user) {
+    return <Login />
+  }
+
+  // Si hay usuario, muestra el dashboard
+  return <DashboardRouter />
 }
 
 export default App
