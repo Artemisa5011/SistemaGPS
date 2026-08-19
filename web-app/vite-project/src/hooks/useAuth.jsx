@@ -8,8 +8,16 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+    const configError = !supabase
+        ? 'Configura una URL válida y VITE_SUPABASE_ANON_KEY en el archivo .env.local'
+        : null;
 
   useEffect(() => {
+        if (!supabase) {
+            setLoading(false);
+            return;
+        }
+
     // Verificar si ya hay una sesión activa
     supabase.auth.getSession().then(({ data: { session } }) => {
         if (session) {setUser(session.user);}
@@ -25,6 +33,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const signIn = async (email, password) => {
+        if (!supabase) throw new Error(configError);
         const { data, error } = await supabase.auth.signInWithPassword({ 
             email,
             password }) 
@@ -39,7 +48,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     return (
-        <AuthContext.Provider value={{ user, loading, signIn, signOut }}>
+        <AuthContext.Provider value={{ user, loading, signIn, signOut, configError }}>
             {children}
         </AuthContext.Provider>
     )

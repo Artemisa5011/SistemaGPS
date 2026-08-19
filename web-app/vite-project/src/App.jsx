@@ -3,7 +3,19 @@ import { Login } from './components/auth/Login'
 import { DashboardRouter } from './components/dashboards/DashboardRouter'
 
 function App() {
-  const { user, loading } = useAuth()
+  const { user, loading, configError } = useAuth()
+
+  if (configError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-6">
+        <div className="max-w-xl rounded-lg bg-red-50 p-6 text-red-800">
+          <h1 className="text-xl font-bold">Configuración incompleta</h1>
+          <p className="mt-2">{configError}</p>
+          <p className="mt-2">Revisa .env.local en la carpeta del proyecto y reinicia Vite.</p>
+        </div>
+      </div>
+    )
+  }
 
   // Mientras carga, muestra un spinner
   if (loading) {
