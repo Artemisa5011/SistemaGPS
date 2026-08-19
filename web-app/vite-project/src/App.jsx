@@ -1,9 +1,12 @@
+import { useState } from 'react'
 import { useAuth } from './hooks/useAuth'
 import { Login } from './components/auth/Login'
 import { DashboardRouter } from './components/dashboards/DashboardRouter'
+import { HomePage } from './components/home/HomePage'
 
 function App() {
   const { user, loading, configError } = useAuth()
+  const [showLogin, setShowLogin] = useState(false)
 
   if (configError) {
     return (
@@ -31,7 +34,9 @@ function App() {
 
   // Si no hay usuario, muestra el login
   if (!user) {
-    return <Login />
+    return showLogin
+      ? <Login onBack={() => setShowLogin(false)} />
+      : <HomePage onLogin={() => setShowLogin(true)} />
   }
 
   // Si hay usuario, muestra el dashboard

@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useAuth } from '../../hooks/useAuth'
 
-export const Login = () => {
+export const Login = ({ onBack }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -78,6 +78,11 @@ export const Login = () => {
 
         <section className="raven-login-panel flex items-center p-6 sm:p-10 lg:sticky lg:top-8 lg:min-h-[560px]">
           <div className="w-full">
+            {onBack && (
+              <button type="button" className="raven-back-button mb-6" onClick={onBack}>
+                &larr; Volver al inicio
+              </button>
+            )}
             <div className="mb-8 text-center">
               <div className="raven-login-header flex items-center justify-center gap-3">
                 <div className="raven-mark raven-mark-login-small" role="img" aria-label="Cuervo con las alas abiertas sobre un pin de ubicación">

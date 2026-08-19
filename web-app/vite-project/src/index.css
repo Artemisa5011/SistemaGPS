@@ -16,6 +16,167 @@ body {
 	background: #080d19;
 }
 
+.raven-home {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at 82% 18%, rgba(37, 99, 235, 0.16), transparent 26%),
+		radial-gradient(circle at 12% 72%, rgba(245, 184, 61, 0.07), transparent 24%),
+		#080d19;
+}
+
+.raven-nav {
+	border-bottom: 1px solid rgba(119, 151, 214, 0.2);
+}
+
+.raven-nav-brand,
+.raven-nav-link,
+.raven-nav-login,
+.raven-back-button {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.raven-nav-brand {
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	color: #ffffff;
+}
+
+.raven-nav-mark {
+	display: grid;
+	width: 1.8rem;
+	height: 1.8rem;
+	place-items: center;
+	border: 1px solid #f5b83d;
+	border-radius: 50%;
+	color: #f5b83d;
+	font-family: 'Cinzel', Georgia, serif;
+}
+
+.raven-nav-link {
+	color: #a9b7d2;
+}
+
+.raven-nav-link:hover,
+.raven-nav-link-active {
+	color: #ffffff;
+}
+
+.raven-nav-login,
+.raven-home-cta {
+	color: #f5b83d;
+}
+
+.raven-nav-login:hover,
+.raven-home-cta:hover {
+	color: #ffffff;
+}
+
+.raven-home-heading,
+.raven-section-heading {
+	font-family: 'Cinzel', Georgia, serif;
+	font-weight: 600;
+}
+
+.raven-home-lead,
+.raven-section-copy {
+	color: #a9b7d2;
+}
+
+.raven-home-cta {
+	border-bottom: 1px solid #f5b83d;
+	padding-bottom: 0.55rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	transition: color 180ms ease;
+}
+
+.raven-home-cta span {
+	padding-left: 0.75rem;
+	font-size: 1.1rem;
+}
+
+.raven-home-emblem {
+	display: grid;
+	min-height: 360px;
+	place-items: center;
+	border: 1px solid rgba(245, 184, 61, 0.2);
+	background: radial-gradient(circle, rgba(37, 99, 235, 0.22), transparent 55%);
+}
+
+.raven-emblem-ring {
+	display: flex;
+	width: 220px;
+	height: 220px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border: 1px solid rgba(245, 184, 61, 0.6);
+	border-radius: 50%;
+	box-shadow: 0 0 0 14px rgba(245, 184, 61, 0.04), 0 0 60px rgba(37, 99, 235, 0.2);
+	color: #f5b83d;
+	font-family: 'Cinzel', Georgia, serif;
+	letter-spacing: 0.18em;
+}
+
+.raven-emblem-ring strong {
+	color: #ffffff;
+	font-size: 2.1rem;
+}
+
+.raven-emblem-ring i {
+	margin-top: 0.5rem;
+	color: #a9b7d2;
+	font-family: 'DM Sans', sans-serif;
+	font-size: 0.5rem;
+	font-style: normal;
+	letter-spacing: 0.2em;
+}
+
+.raven-about {
+	border-top: 1px solid rgba(119, 151, 214, 0.2);
+	border-bottom: 1px solid rgba(119, 151, 214, 0.2);
+}
+
+.raven-home-purpose {
+	border-top: 2px solid #f5b83d;
+	padding: 1.5rem;
+	background: rgba(18, 29, 53, 0.72);
+}
+
+.raven-home-purpose h2 {
+	margin-top: 1rem;
+	color: #ffffff;
+	font-family: 'Cinzel', Georgia, serif;
+	font-size: 1.2rem;
+}
+
+.raven-home-purpose p {
+	margin-top: 0.65rem;
+	color: #a9b7d2;
+	font-size: 0.85rem;
+	line-height: 1.65;
+}
+
+.raven-home-footer {
+	color: #6f7f9e;
+	font-size: 0.7rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.raven-back-button {
+	color: #52617b;
+}
+
+.raven-back-button:hover {
+	color: #17346f;
+}
+
 .raven-shell {
 	background:
 		radial-gradient(circle at 8% 14%, rgba(37, 99, 235, 0.18), transparent 28%),
