@@ -280,6 +280,7 @@ body {
 .raven-login-panel {
 	position: relative;
 	overflow: hidden;
+	border-radius: 1.25rem;
 	border: 1px solid rgba(184, 201, 235, 0.7);
 	background: #f6f8fc;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
@@ -323,7 +324,7 @@ body {
 
 .raven-input {
 	border: 1px solid #cbd5e5;
-	border-radius: 0.2rem;
+	border-radius: 0.75rem;
 	background: #ffffff;
 	color: #15213a;
 	outline: none;
@@ -347,7 +348,7 @@ body {
 
 .raven-submit {
 	border: 1px solid #1d4ed8;
-	border-radius: 0.2rem;
+	border-radius: 0.75rem;
 	background: #17346f;
 	color: #ffffff;
 	letter-spacing: 0.06em;

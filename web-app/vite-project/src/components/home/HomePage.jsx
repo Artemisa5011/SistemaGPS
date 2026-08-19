@@ -49,16 +49,13 @@ export const HomePage = ({ onLogin }) => {
 
       <section id="inicio" className="raven-home-hero mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12 lg:pb-28 lg:pt-24">
         <div>
-          <p className="raven-eyebrow">Sistema de Rastreo GPS</p>
+          <p className="raven-eyebrow">La sombra conoce tu camino</p>
           <h1 className="raven-home-heading mt-5 max-w-3xl text-5xl leading-tight text-white sm:text-7xl">
-            La sombra conoce tu camino.
+            Sistema de Rastreo GPS.
           </h1>
           <p className="raven-home-lead mt-7 max-w-xl text-lg leading-8">
             Tecnologia de rastreo para empresas que necesitan proteger sus vehiculos, cuidar a sus equipos y tomar mejores decisiones en cada ruta.
           </p>
-          <button type="button" className="raven-home-cta mt-9" onClick={onLogin}>
-            INICIAR SESIÓN <span aria-hidden="true">&rarr;</span>
-          </button>
         </div>
         <div className="raven-home-emblem" aria-hidden="true">
           <div className="raven-emblem-ring">
