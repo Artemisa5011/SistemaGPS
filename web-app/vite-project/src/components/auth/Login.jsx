@@ -1,5 +1,5 @@
 // src/components/auth/Login.jsx
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useAuth } from '../../hooks/useAuth'
 
 export const Login = () => {
@@ -17,7 +17,7 @@ export const Login = () => {
     try {
       await signIn(email, password)
       // Si el login es exitoso, el usuario será redirigido automáticamente
-    } catch (err) {
+    } catch {
       setError('Correo o contraseña incorrectos')
     } finally {
       setLoading(false)

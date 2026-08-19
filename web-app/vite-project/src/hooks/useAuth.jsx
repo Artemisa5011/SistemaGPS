@@ -1,4 +1,4 @@
-import {useEfect, useState, createContext, useContext} from 'react';
+import { useEffect, useState, createContext, useContext } from 'react';
 import { supabase } from '../services/supabase';
 
 // Creamos un contexto para compartir el estado de autenticación

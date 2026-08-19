@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAuth } from './hooks/useAuth'
 import { Login } from './components/auth/Login'
 import { DashboardRouter } from './components/dashboards/DashboardRouter'
