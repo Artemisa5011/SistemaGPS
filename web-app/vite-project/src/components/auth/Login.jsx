@@ -25,45 +25,108 @@ export const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
-      <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
-        <div className="text-center mb-8">
-          <div className="text-6xl mb-4">🚗</div>
-          <h1 className="text-3xl font-bold text-gray-800">RAVEN TRACK</h1>
-          <p className="text-gray-600">Sistema de Rastreo GPS</p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
+    <main className="raven-shell min-h-screen px-5 py-8 sm:px-8 lg:px-12">
+      <div className="raven-layout mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="raven-intro flex flex-col justify-between p-7 sm:p-10 lg:p-12">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <div className="mb-8 flex items-center gap-4">
+              <div className="raven-mark raven-mark-small" role="img" aria-label="Cuervo con las alas abiertas sobre un pin de ubicación">
+                <svg width="88" height="76" viewBox="0 0 132 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M66 108C66 108 29 72.5 29 42.5C29 21.8 45.6 5 66 5C86.4 5 103 21.8 103 42.5C103 72.5 66 108 66 108Z" fill="#2563EB" />
+                  <path d="M66 72C82.0163 72 95 59.0163 95 43C95 26.9837 82.0163 14 66 14C49.9837 14 37 26.9837 37 43C37 59.0163 49.9837 72 66 72Z" fill="#E5EEFF" />
+                  <path d="M66 62C76.4934 62 85 53.4934 85 43C85 32.5066 76.4934 24 66 24C55.5066 24 47 32.5066 47 43C47 53.4934 55.5066 62 66 62Z" fill="#111827" />
+                  <path d="M66 30C61.5 23 54 19 43 19C49 27 53 34 54 42C46 38 37 37 27 40C38 45 47 51 53 59C48 59 42 61 36 65C48 68 57 65 66 58C75 65 84 68 96 65C90 61 84 59 79 59C85 51 94 45 105 40C95 37 86 38 78 42C79 34 83 27 89 19C78 19 70.5 23 66 30Z" fill="#111827" />
+                  <path d="M66 35L73 39L69 46H63L59 39L66 35Z" fill="#F5B83D" />
+                  <circle cx="60" cy="34" r="2" fill="#F5B83D" />
+                  <circle cx="72" cy="34" r="2" fill="#F5B83D" />
+                  <path d="M62 43H70L66 48L62 43Z" fill="#F5B83D" />
+                  <path d="M66 81V101" stroke="#2563EB" stroke-width="4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div>
+                <p className="raven-kicker">Sistema de Rastreo GPS</p>
+                <p className="raven-brand-small">RAVEN TRACK</p>
+              </div>
+            </div>
+            <p className="raven-eyebrow">La sombra conoce tu camino</p>
+            <h1 className="raven-heading mt-4 max-w-2xl text-4xl leading-tight text-white sm:text-6xl">
+              Vigilancia inteligente para cada ruta.
+            </h1>
+            <p className="raven-lead mt-6 max-w-xl text-base leading-7 sm:text-lg">
+              Protegemos el movimiento de tu empresa con información precisa, decisiones oportunas y una presencia que nunca pierde de vista el camino.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-3 sm:grid-cols-3 lg:mt-16">
+            <article className="raven-purpose">
+              <span className="raven-purpose-number">01</span>
+              <h2>Misión</h2>
+              <p>Dar control y tranquilidad mediante un rastreo GPS claro, confiable y accesible.</p>
+            </article>
+            <article className="raven-purpose">
+              <span className="raven-purpose-number">02</span>
+              <h2>Visión</h2>
+              <p>Ser el aliado tecnológico que convierte cada trayecto en una operación segura.</p>
+            </article>
+            <article className="raven-purpose">
+              <span className="raven-purpose-number">03</span>
+              <h2>Objetivo</h2>
+              <p>Optimizar flotas, proteger activos y anticiparnos a cada riesgo del camino.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="raven-login-panel flex items-center p-6 sm:p-10">
+          <div className="w-full">
+            <div className="mb-8 text-center">
+              <div className="raven-mark mb-5 flex justify-center" role="img" aria-label="Cuervo con las alas abiertas sobre un pin de ubicación">
+                <svg width="132" height="112" viewBox="0 0 132 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M66 108C66 108 29 72.5 29 42.5C29 21.8 45.6 5 66 5C86.4 5 103 21.8 103 42.5C103 72.5 66 108 66 108Z" fill="#2563EB" />
+              <path d="M66 72C82.0163 72 95 59.0163 95 43C95 26.9837 82.0163 14 66 14C49.9837 14 37 26.9837 37 43C37 59.0163 49.9837 72 66 72Z" fill="#E5EEFF" />
+              <path d="M66 62C76.4934 62 85 53.4934 85 43C85 32.5066 76.4934 24 66 24C55.5066 24 47 32.5066 47 43C47 53.4934 55.5066 62 66 62Z" fill="#111827" />
+              <path d="M66 30C61.5 23 54 19 43 19C49 27 53 34 54 42C46 38 37 37 27 40C38 45 47 51 53 59C48 59 42 61 36 65C48 68 57 65 66 58C75 65 84 68 96 65C90 61 84 59 79 59C85 51 94 45 105 40C95 37 86 38 78 42C79 34 83 27 89 19C78 19 70.5 23 66 30Z" fill="#111827" />
+              <path d="M66 35L73 39L69 46H63L59 39L66 35Z" fill="#F5B83D" />
+              <circle cx="60" cy="34" r="2" fill="#F5B83D" />
+              <circle cx="72" cy="34" r="2" fill="#F5B83D" />
+              <path d="M62 43H70L66 48L62 43Z" fill="#F5B83D" />
+              <path d="M66 81V101" stroke="#2563EB" stroke-width="4" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h2 className="raven-login-title">RAVEN TRACK</h2>
+              <p className="raven-login-subtitle">Acceso al centro de control</p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="raven-label block text-sm font-medium mb-2">
               Correo electrónico
             </label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="raven-input w-full px-4 py-3"
               placeholder="admin@empresa.com"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="raven-label block text-sm font-medium mb-2">
               Contraseña
             </label>
             <input 
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="raven-input w-full px-4 py-3"
               placeholder="••••••••"
               required
             />
           </div>
 
           {error && (
-            <div className="text-red-500 text-sm text-center bg-red-50 p-2 rounded">
+            <div className="raven-error text-sm text-center p-2 rounded">
               {error}
             </div>
           )}
@@ -71,7 +134,7 @@ export const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition disabled:opacity-50"
+            className="raven-submit w-full py-3 font-semibold transition disabled:opacity-50"
           >
             {loading ? (
               <span className="flex items-center justify-center">
@@ -85,17 +148,19 @@ export const Login = () => {
               'Iniciar Sesión'
             )}
           </button>
-        </form>
+            </form>
 
-        <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
+            <div className="mt-7 text-center">
+          <p className="raven-register text-sm">
             ¿No tienes cuenta?{' '}
-            <button className="text-blue-600 hover:text-blue-800 font-medium">
+            <button className="raven-register-link font-medium">
               Regístrate
             </button>
           </p>
-        </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 }

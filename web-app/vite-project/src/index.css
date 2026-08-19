@@ -1,3 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	font-family: 'DM Sans', sans-serif;
+	color: #e8eefc;
+	background: #080d19;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: #080d19;
+}
+
+.raven-shell {
+	background:
+		radial-gradient(circle at 8% 14%, rgba(37, 99, 235, 0.18), transparent 28%),
+		radial-gradient(circle at 90% 82%, rgba(245, 184, 61, 0.08), transparent 26%),
+		#080d19;
+}
+
+.raven-layout {
+	min-height: calc(100vh - 4rem);
+}
+
+.raven-intro {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(119, 151, 214, 0.24);
+	background: linear-gradient(145deg, rgba(18, 29, 53, 0.94), rgba(10, 16, 30, 0.98));
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.raven-intro::before,
+.raven-intro::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+.raven-intro::before {
+	inset: 18px;
+	border: 1px solid rgba(245, 184, 61, 0.16);
+}
+
+.raven-intro::after {
+	right: -80px;
+	top: -100px;
+	width: 300px;
+	height: 300px;
+	border: 1px solid rgba(82, 132, 255, 0.18);
+	border-radius: 50%;
+	box-shadow: 0 0 0 24px rgba(82, 132, 255, 0.04), 0 0 0 48px rgba(82, 132, 255, 0.03);
+}
+
+.raven-kicker,
+.raven-eyebrow,
+.raven-purpose-number {
+	color: #f5b83d;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.raven-brand-small,
+.raven-heading,
+.raven-login-title,
+.raven-purpose h2 {
+	font-family: 'Cinzel', Georgia, serif;
+}
+
+.raven-brand-small {
+	margin-top: 0.2rem;
+	color: #ffffff;
+	font-size: 1.05rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+
+.raven-heading {
+	position: relative;
+	z-index: 1;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+.raven-lead {
+	position: relative;
+	z-index: 1;
+	color: #a9b7d2;
+}
+
+.raven-purpose {
+	position: relative;
+	z-index: 1;
+	border-top: 1px solid rgba(245, 184, 61, 0.45);
+	padding: 1rem 0.85rem 0;
+}
+
+.raven-purpose h2 {
+	margin-top: 0.55rem;
+	color: #f2f5ff;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.raven-purpose p {
+	margin-top: 0.45rem;
+	color: #91a1c0;
+	font-size: 0.78rem;
+	line-height: 1.55;
+}
+
+.raven-login-panel {
+	border: 1px solid rgba(184, 201, 235, 0.7);
+	background: #f6f8fc;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.raven-login-title {
+	color: #121b2d;
+	font-size: 1.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+
+.raven-login-subtitle,
+.raven-register {
+	color: #66738c;
+}
+
+.raven-login-subtitle {
+	margin-top: 0.35rem;
+	font-size: 0.85rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.raven-label {
+	color: #26334c;
+}
+
+.raven-input {
+	border: 1px solid #cbd5e5;
+	border-radius: 0.2rem;
+	background: #ffffff;
+	color: #15213a;
+	outline: none;
+	transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.raven-input:focus {
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.raven-input::placeholder {
+	color: #9aa7bb;
+}
+
+.raven-error {
+	border: 1px solid #f1b8b8;
+	background: #fff1f1;
+	color: #b42318;
+}
+
+.raven-submit {
+	border: 1px solid #1d4ed8;
+	border-radius: 0.2rem;
+	background: #17346f;
+	color: #ffffff;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.raven-submit:hover {
+	background: #2563eb;
+}
+
+.raven-submit:focus-visible,
+.raven-register-link:focus-visible {
+	outline: 3px solid rgba(245, 184, 61, 0.6);
+	outline-offset: 3px;
+}
+
+.raven-register-link {
+	color: #1d4ed8;
+}
+
+.raven-register-link:hover {
+	color: #102d70;
+}
+
+@media (max-width: 640px) {
+	.raven-layout {
+		min-height: auto;
+	}
+
+	.raven-intro::before {
+		inset: 10px;
+	}
+
+	.raven-purpose {
+		padding-left: 0;
+	}
+}
