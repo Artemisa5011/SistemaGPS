@@ -117,9 +117,24 @@ body {
 }
 
 .raven-login-panel {
+	position: relative;
+	overflow: hidden;
 	border: 1px solid rgba(184, 201, 235, 0.7);
 	background: #f6f8fc;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.raven-login-panel::before {
+	position: absolute;
+	right: -72px;
+	bottom: -72px;
+	width: 190px;
+	height: 190px;
+	border: 1px solid rgba(37, 99, 235, 0.15);
+	border-radius: 50%;
+	box-shadow: 0 0 0 18px rgba(37, 99, 235, 0.04), 0 0 0 36px rgba(37, 99, 235, 0.03);
+	content: '';
+	pointer-events: none;
 }
 
 .raven-login-title {

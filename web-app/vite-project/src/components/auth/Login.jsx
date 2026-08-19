@@ -26,7 +26,7 @@ export const Login = () => {
 
   return (
     <main className="raven-shell min-h-screen px-5 py-8 sm:px-8 lg:px-12">
-      <div className="raven-layout mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="raven-layout mx-auto grid max-w-7xl items-start gap-8 lg:grid-cols-[minmax(0,1fr)_420px]">
         <section className="raven-intro flex flex-col justify-between p-7 sm:p-10 lg:p-12">
           <div>
             <div className="mb-8 flex items-center gap-4">
@@ -76,11 +76,12 @@ export const Login = () => {
           </div>
         </section>
 
-        <section className="raven-login-panel flex items-center p-6 sm:p-10">
+        <section className="raven-login-panel flex items-center p-6 sm:p-10 lg:sticky lg:top-8 lg:min-h-[560px]">
           <div className="w-full">
             <div className="mb-8 text-center">
-              <div className="raven-mark mb-5 flex justify-center" role="img" aria-label="Cuervo con las alas abiertas sobre un pin de ubicación">
-                <svg width="132" height="112" viewBox="0 0 132 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <div className="raven-login-header flex items-center justify-center gap-3">
+                <div className="raven-mark raven-mark-login-small" role="img" aria-label="Cuervo con las alas abiertas sobre un pin de ubicación">
+                  <svg width="64" height="55" viewBox="0 0 132 112" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M66 108C66 108 29 72.5 29 42.5C29 21.8 45.6 5 66 5C86.4 5 103 21.8 103 42.5C103 72.5 66 108 66 108Z" fill="#2563EB" />
               <path d="M66 72C82.0163 72 95 59.0163 95 43C95 26.9837 82.0163 14 66 14C49.9837 14 37 26.9837 37 43C37 59.0163 49.9837 72 66 72Z" fill="#E5EEFF" />
               <path d="M66 62C76.4934 62 85 53.4934 85 43C85 32.5066 76.4934 24 66 24C55.5066 24 47 32.5066 47 43C47 53.4934 55.5066 62 66 62Z" fill="#111827" />
@@ -90,10 +91,13 @@ export const Login = () => {
               <circle cx="72" cy="34" r="2" fill="#F5B83D" />
               <path d="M62 43H70L66 48L62 43Z" fill="#F5B83D" />
               <path d="M66 81V101" stroke="#2563EB" stroke-width="4" stroke-linecap="round" />
-                </svg>
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <h2 className="raven-login-title">RAVEN TRACK</h2>
+                  <p className="raven-login-subtitle">Acceso al centro de control</p>
+                </div>
               </div>
-              <h2 className="raven-login-title">RAVEN TRACK</h2>
-              <p className="raven-login-subtitle">Acceso al centro de control</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
